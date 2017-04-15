@@ -1,0 +1,49 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-header">
+        <a class="navbar-brand " href="#home">Contact Management System</a>
+    </div>
+   <ul class="nav navbar-nav navbar-right">
+   	  <li><a href="#" ><span class="glyphicon glyphicon-arrow-right"></span>Kuvira Technologies</a></li>
+    
+      <li ng-show="!authService.isLoggedIn()">
+         <a href="#" role="button" class="btn"><span class="glyphicon glyphicon-user"></span>
+             Sign Up</a>
+      </li>
+      
+      <li ng-show="!authService.isLoggedIn()">
+      	<a href="#loginModal" role="button" class="btn " data-toggle="modal">
+      	  <span class="glyphicon glyphicon-log-in"></span>
+      	  Login
+        </a>
+      </li>
+      
+      <li ng-show="authService.isLoggedIn()">
+      	<a href="#" role="button" class="btn " ng-click="authService.logout()" data-toggle="modal">
+      	  <span class="glyphicon glyphicon-log-in"></span>
+      	  Logout
+        </a>
+      </li>
+    </ul>
+</nav>
+
+<div class="modal" id="loginModal" fade-in>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 class="modal-title">Login</h4>
+            </div>
+            <div class="modal-body">
+                <span id="login-email">Email</span>
+                <input ng-model="loginInput" type="text" placeholder="Email" name='username'>
+                <span id="login-password">Password</span>               
+                <input ng-model="passwordInput" type="password" placeholder="Password" name='password'>
+                 <a href="#">Forgot password?</a>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-primary" data-dismiss="modal" ng-click="authService.login(loginInput, passwordInput)">
+                    <i class="glyphicon glyphicon-user"></i>Log in</a>
+            </div>
+        </div>
+    </div>
+</div>

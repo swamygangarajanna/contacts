@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.kuvira.contact.app</groupId>
+		<artifactId>ContactManager</artifactId>
+		<version>DYNAMIC-SNAPSHOT</version>
+	</parent>
+
+	<groupId>com.kuvira.contact.app</groupId>
+	<artifactId>implementation</artifactId>
+	<version>DYNAMIC-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>${project.artifactId}</name>
+
+	
+	<properties>
+		<!-- <sonar.pitest.mode>skip</sonar.pitest.mode>
+		<component.name>NWO</component.name>
+		<resteasy.version>2.3.7.Final</resteasy.version>
+		<junit.version>4.8.1</junit.version>
+		<easymock.version>3.2</easymock.version>
+		<commons.logging.version>1.1.1</commons.logging.version>
+		<OODParentVersion>1.1.65</OODParentVersion> -->
+	</properties>	
+	
+	 <modules>
+		<module>contactsBiz</module>
+		<module>contactServices</module>
+		<module>contacts-ui</module>
+     </modules>
+	<build>
+			<pluginManagement>
+				<plugins>
+				</plugins>
+		   </pluginManagement>
+	</build>	
+	
+	<dependencies>		
+	</dependencies>
+	<profiles> </profiles>
+</project>

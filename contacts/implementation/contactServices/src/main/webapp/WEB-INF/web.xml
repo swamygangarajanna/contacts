@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<display-name>Services</display-name>	
+	<!-- Auto scan REST service 
+	<context-param>
+		<param-name>resteasy.scan</param-name>
+		<param-value>true</param-value>
+	</context-param> -->
+
+	<!-- <context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>classpath:log4J.xml</param-value>
+	</context-param> -->
+
+	<context-param>
+		<param-name>resteasy.resources</param-name>
+		<param-value>com.kuvira.contact.services.ContactsProviderService</param-value>
+	</context-param> 
+	
+	<context-param>
+        <param-name>resteasy.providers</param-name>
+        <param-value>com.kuvira.contacts.services.exception.mapper.ServiceCreationFailureExceptionMapper,com.kuvira.contacts.services.exception.mapper.UpdateExceptionMapper</param-value>
+	</context-param>
+	
+	<!-- this need same with resteasy servlet url-pattern -->
+	<context-param>
+		<param-name>resteasy.servlet.mapping.prefix</param-name>
+		<param-value>/contacts</param-value>
+	</context-param>
+	
+	<!-- <listener>
+		<listener-class>
+			org.springframework.web.util.Log4jConfigListener
+		</listener-class>
+	</listener> -->
+
+	<!-- <servlet>
+	<servlet-name>spring</servlet-name>
+	 <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	 <load-on-startup>1</load-on-startup>
+	</servlet>
+     
+     <servlet-mapping>
+    	<servlet-name>spring</servlet-name>
+    	<url-pattern>/</url-pattern> 
+     </servlet-mapping> -->
+	
+	<listener>
+		<listener-class>
+			org.jboss.resteasy.plugins.server.servlet.ResteasyBootstrap
+		</listener-class>
+	</listener>
+	
+	<servlet>
+		<servlet-name>resteasy-servlet</servlet-name>
+		<servlet-class>
+			org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher
+		</servlet-class>
+	</servlet>
+     
+	<servlet-mapping>
+		<servlet-name>resteasy-servlet</servlet-name>
+		<url-pattern>/contacts/*</url-pattern>
+	</servlet-mapping>
+	
+    <!-- <servlet-mapping>
+		<servlet-name>javax.ws.rs.core.Application</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping> -->	
+</web-app>

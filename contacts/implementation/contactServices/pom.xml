@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.kuvira.contact.app</groupId>
+		<artifactId>implementation</artifactId>
+		<version>DYNAMIC-SNAPSHOT</version>
+	</parent>
+
+	<groupId>com.kuvira.contact.app</groupId>
+	<artifactId>contactServices</artifactId>
+	<version>DYNAMIC-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>${project.artifactId}</name>
+	
+	<properties>
+		<resteasy.version>3.0.2.Final</resteasy.version>
+		<junit.version>4.8.1</junit.version>
+		<easymock.version>3.2</easymock.version>
+		<commons.logging.version>1.1.1</commons.logging.version>
+	</properties>	
+	
+	<!-- <modules>
+		<module>interface</module>
+		<module -->
+	<build>
+	 <finalName>cms</finalName>
+			<pluginManagement>
+				 <plugins>
+					  <plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<executions>
+							<execution>
+								<goals>
+									<goal>compile</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<source>1.7</source>
+							<target>1.7</target>
+						</configuration>
+					</plugin>
+				</plugins>
+		   </pluginManagement>
+	</build>	
+	
+	<dependencies>		
+	 <dependency>
+	  <groupId>com.kuvira.contact.app</groupId>
+	  <artifactId>contactsBiz</artifactId>
+	  <version>DYNAMIC-SNAPSHOT</version>
+	 </dependency>
+	 
+	 	<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jaxrs</artifactId>
+			<version>${resteasy.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jackson-provider</artifactId>
+			<version>${resteasy.version}</version>
+		</dependency>
+		
+		<!-- <dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>jaxrs-api</artifactId>
+			<version>${resteasy.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jackson-provider</artifactId>
+			<version>${resteasy.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-links</artifactId>
+			<version>${resteasy.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-multipart-provider</artifactId>
+			<version>${resteasy.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.dozer</groupId>
+			<artifactId>dozer</artifactId>
+			<version>5.4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>${commons.logging.version}</version>
+		</dependency> -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<type>jar</type>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+		 <groupId>org.easymock</groupId>
+		 <artifactId>easymock</artifactId>
+		 <version>${easymock.version}</version>
+         <scope>test</scope>
+	    </dependency>
+		<dependency>
+		   <groupId>org.easymock</groupId>
+		   <artifactId>easymockclassextension</artifactId>	
+		   <version>${easymock.version}</version>
+           <scope>test</scope>	
+	    </dependency>		
+	</dependencies>
+	<profiles> 
+	
+	</profiles>
+</project>

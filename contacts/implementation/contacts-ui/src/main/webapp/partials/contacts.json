@@ -1,0 +1,55 @@
+[
+   {
+    "contact_name": "Deepthi",
+    "first_name": "Deepthi",
+    "last_name": "",
+    "sur_name": "Dhananjaya Murthy",
+    "address": {
+      "unit": "15",
+      "street": "EssexStreet",
+      "area": "Epping",
+      "state": "nsw",
+      "country": "Australia",
+      "pincode":2121
+    },
+    "email":"ar.dmurthy@gmail.com",
+    "contact_num": "0426601106",
+    "mobile_number": "0426601106"
+  }
+  
+  {
+    "contact_name": "SwamyMG",
+    "first_name": "Swamy",
+    "last_name": "Gangarajanna",
+    "sur_name": "Madalu Gangarajanna",
+    "address": {
+      "unit": "15",
+      "street": "EssexStreet",
+      "area": "Epping",
+      "state": "nsw",
+      "country": "Australia",
+      "pincode":2121
+    },
+    "email":"swamy.m.gangaraj@gmail.com",
+    "contact_num": "0426601106",
+    "mobile_number": "0426601106"
+  }
+  
+  {
+    "contact_name": "Deeksha",
+    "first_name": "Deeksha",
+    "last_name": "",
+    "sur_name": "Dhananjaya Murthy",
+    "address": {
+      "unit": "15",
+      "street": "EssexStreet",
+      "area": "Epping",
+      "state": "nsw",
+      "country": "Australia",
+      "pincode":2121
+    },
+    "email":"dmurthy@gmail.com",
+    "contact_num": "0426601117",
+    "mobile_number": "0426601117"
+  }
+]
